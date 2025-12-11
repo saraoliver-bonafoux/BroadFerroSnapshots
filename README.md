@@ -1,55 +1,15 @@
-# Numerical methods for quasi-stationary distributions
+# Snapshots of the spatial spin configuration in the soft-ferromagnetic phase
 
-This repository provides Fortran codes to implement the two numerical methods for computing quasi-stationary distributions (QSDs) described in the paper *Numerical methods for quasi-stationary distributions*:
-<!-- Once we upload the paper to arXiv, add a link-->
+In this repository we provide a short film composed of snapshots of the spatial spin configuration during a transition between ordered states in the soft-ferromagnetic phase. The film complements the results presented in the paper *Stochastic field effects in a two-state system: symmetry breaking and symmetry restoring*.
 
-- **Iterative algorithm** - solves the equation that defines the QSD by refining an initial guess through successive updates.
+The snapshots correspond to a system of size $L = 100$, field intensity $D = 0.1$, and temperature $T = 1.9$, which lies within the soft-ferromagnetic phase. In the simulation, we initialize the system at the completely ordered state of the magnetization $m(t=0) = -1$, and let it evolve. The film displays snapshots of the spatial spin configuration from $t = 21000$ MCS to $t = 23000$ MCS, during which the system jumps from $m \simeq -1$ to $m \simeq 1$. Snapshots are shown every 2 MCS. 
 
-- **Monte Carlo method with resetting** – simulates a single realisation of the stochastic process and uses its prior history to reset the process after absorption. The QSD is then estimated from the histogram of residence times in the set of non-absorbing states.
+As can be seen in the film, the transition between ordered magnetization states occurs through the nucleation of droplets of the new phase.
 
-Due to technical differences in implementation, separate codes are provided for processes with discrete and continuous state spaces.
+## References
 
-## Repository Structure
-
-The repository is organised as follows:
-
-```text
-Iterative/
-├── Discrete/
-│   ├── IterativeDiscrete.f90          # One-step discrete stochastic processes with a single absorbing state at n = 0
-│   ├── IterativeDiscrete_BAD.f90      # Branching-annihilation-decay process (multi-step, single absorbing state)
-│   ├── IterativeDiscrete_VM.f90       # Biased voter model (one-step, two absorbing states)
-│   └── IterativeDiscrete_SIRS.f90   # SIRS model (2 stochastic variables) 
-└── Continuous/
-    ├── IterativeContinuous.f90        # Continuous stochastic processes with an absorbing barrier at x = 0 and a reflecting barrier at x = L
-    └── IterativeContinuous_VM.f90     # Continuous biased voter model (absorbing barriers at x = 0 and x = L)
-MonteCarlo/
-├── dranxor.f90                        # Random number generator
-├── Discrete/
-│   ├── MonteCarloDiscrete.f90         # General discrete stochastic processes (may require minor modifications for the number of possible reactions)
-│   └── MonteCarloDiscrete_SIRS.f90  # SIRS model (2 stochastic variables) 
-└── Continuous/
-    ├── MonteCarloContinuous.f90       # General continuous stochastic processes
-    ├── MonteCarloContinuous2D_BM.f90  # Diffusion process in 2D
-    └── ReflectionCircle.pdf           # Documentation for MonteCarloContinuous2D_BM.f90: reflecting boundary conditions on a circle 
-```
-
-## Compilation
-
-All codes were compiled and tested with Intel Fortran Compiler:
-
-   ifort (IFORT) 2021.10.0 20230609
-
-The following compilation command was used: 
-
-  ifort program_name.f90 -O3 -no-prec-div -fp-model fast=2 -march=sandybridge -mtune=core-avx2 -o program_name.x
-  
-## How to cite
-
-If you use these numerical methods in your research, please cite:
-
-> *Numerical methods for quasi-stationary distributions*
+> *Stochastic field effects in a two-state system: symmetry breaking and symmetry restoring*
 > 
-> Sara Oliver-Bonafoux, Javier Aguilar, Tobias Galla, and Raúl Toral
+> Sara Oliver-Bonafoux, Raúl Toral, and Amitabha Chakrabarti
 
 
