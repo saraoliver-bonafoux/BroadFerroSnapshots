@@ -1,10 +1,10 @@
-# Snapshots of the spatial spin configuration in the soft-ferromagnetic phase
+# Snapshots of the spatial spin configuration in the broad-ferromagnetic phase
 
-In this repository we provide a short film composed of snapshots of the spatial spin configuration during a transition between ordered states in the soft-ferromagnetic phase. The film complements the results presented in the paper *Stochastic field effects in a two-state system: symmetry breaking and symmetry restoring*.
+This repository contains two short films composed of snapshots of the spatial spin configuration during transitions between ordered states in the broad-ferromagnetic phase. The films complement the results presented in the paper *Stochastic field effects in a two-state system: symmetry breaking and symmetry restoring*. 
 
-The snapshots correspond to a system of size $L = 100$, field intensity $D = 0.1$, and temperature $T = 1.9$, which lies within the soft-ferromagnetic phase. In the simulation, we initialize the system at the completely ordered state of the magnetization $m(t=0) = -1$, and let it evolve. The film displays snapshots of the spatial spin configuration from $t = 21000$ MCS to $t = 23000$ MCS, during which the system jumps from $m \simeq -1$ to $m \simeq 1$. Snapshots are shown every 2 MCS. 
+Both films correspond to a system of size $L = 100$, and to two representative combinations of field intensity $D$ and temperature $T$: $D = 0.1$ and $T = 1.9$; and $D = 0.6$ and $T = 0.0$. In both cases, the combination of parameters $(D, T)$ lie within the broad-ferromagnetic phase. In the simulations, we initialize the system at the completely ordered state of the magnetization $m(t=0) = -1$, and let it evolve. The films display snapshots of the spatial spin configuration during the time interval in which the system jumps from $m \simeq -1$ to $m \simeq 1$.
 
-As can be seen in the film, the transition between ordered magnetization states occurs through the nucleation of droplets of the new phase.
+For $D = 0.1$ and $T = 1.9$, the transition between ordered magnetization states occurs through the nucleation and growth of droplets of the new phase. For $D = 0.6$ and $T = 0.0$, the transition is initiated by the flipping of isolated spins, which trigger a rapid reversal in the global magnetization. Although droplets of the original phase can temporarily emerge and survive for some time, they progressively shrink and vanish, and the system ultimately becomes fully aligned in the opposite state of magnetization.
 
 ## References
 
