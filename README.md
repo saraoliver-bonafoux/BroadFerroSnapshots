@@ -8,8 +8,12 @@ For $D = 0.1$ and $T = 1.9$, the transition between ordered magnetization states
 
 ## References
 
-> *Stochastic field effects in a two-state system: symmetry breaking and symmetry restoring*
+> *Stochastic field effects in a two-state system: Symmetry breaking and symmetry restoring*
 > 
 > Sara Oliver-Bonafoux, Raúl Toral, and Amitabha Chakrabarti
+>
+> Physical Review E 113, 044110 (2026)
+>
+> https://doi.org/10.1103/kyxg-y54l
 
 
